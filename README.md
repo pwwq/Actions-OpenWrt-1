@@ -1,5 +1,20 @@
 **English** | [中文](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
 
+
+## SSH 连接到 Actions
+
+* 在`Run Workflow`时把`SSH connection to Actions`的值改为`true`
+* 在触发工作流程后，在 Actions 日志页面等待执行到SSH connection to Actions步骤
+* 复制 SSH 连接命令粘贴到终端内执行，或者复制链接在浏览器中打开使用网页终端。（网页终端可能会遇到黑屏的情况，按 Ctrl+C 即可）
+
+```
+cd openwrt && make menuconfig
+```
+
+* 完成后按Ctrl+D组合键或执行exit命令退出，后续编译工作将自动进行。
+
+
+
 # Actions-OpenWrt
 
 [![LICENSE](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square&label=LICENSE)](https://github.com/P3TERX/Actions-OpenWrt/blob/master/LICENSE)
