@@ -31,7 +31,7 @@ git clone https://github.com/P3TERX/xxx package/xxx
 
 在检测到源码更新后自动进行编译。
 
-* [创建Personal access token](https://github.com/settings/tokens/new) 名字为`ACTIONS_TRIGGER`并且勾选`repo`权限，这将用于自动触发编译工作流程。
+* [创建Personal access token](https://github.com/settings/tokens/new) 名字为`ACTIONS_TRIGGER_PAT`并且勾选`repo`权限，这将用于自动触发编译工作流程。
 * 然后点击自己仓库的`Settings`选项卡，再点击`Secrets`。添加名为`ACTIONS_TRIGGER_PAT`的加密环境变量，保存刚刚创建的 PAT 。
 * 在 `Actions` 页面选择`Update Checker`，点击`Run workflow`手动进行一次测试运行。如果没有报错且 OpenWrt 编译工作流程被触发，则代表测试通过。
 * 最后编辑`Update Checker`的 `workflow` 文件`.github/workflows/update-checker.yml`，取消注释（删除#）定时触发相关的部分。这里可以根据 cron 格式来设定检测的时间，时区为 UTC 。
